@@ -1,1 +1,51 @@
-<h3>{{title | titlecase}}</h3>
+<!-- Interpolation -->
+<h3>{{title}}</h3>
+<h3>{{2+2}}</h3>
+<h3>{{"Welcome to "+title}}</h3>
+<h3>{{title.length}}</h3>
+<h3>{{title.toUpperCase()}}</h3>
+<h3>{{greetUser()}}</h3>
+<!-- <h3>{{a=4+4}}</h3> -->
+<!-- <h3>{{window.location.href}}</h3> -->
+<h3>{{url}}</h3>
+
+<!-- Property Binding -->
+<input type="text" value="test component">
+<br>
+<input type="text" value="{{title}}">
+<br>
+<input type="text" id={{title}} value="{{title}}">
+<br>
+<input type="text" [id]="title" value="{{title}}">
+<br>
+<input type="text" bind-id="title" value="{{title}}">
+<br>
+<input type="text" bind-disabled="isDisabled" bind-id="title" value="{{title}}">
+<br>
+<input type="text" [disabled]="isDisabled" bind-id="title" value="{{title}}">
+<br>
+
+<!-- Event Binding -->
+<button (click)="onClick()">Click Here</button>
+<br>
+<input #myInput type="text" value="{{title}}">
+<button (click)="changeTitle(myInput.value)">Change Title</button>
+
+<!-- Two Way Binding -->
+<input type="text" value="{{title}}" [(ngModel)]="title">
+
+<!-- If -->
+
+<!-- Switch -->
+
+<!-- For -->
+
+<!-- Component Interaction -->
+<!-- Input to Child -->
+<!-- <h3>Message from Parent: {{parentData}}</h3> -->
+<h3>Message from Parent: {{message}}</h3>
+
+<!-- Output Event from Child -->
+<button (click)="emitEvent()">Send to Parent</button>
+
+
