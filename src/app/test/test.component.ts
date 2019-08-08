@@ -10,6 +10,19 @@ export class TestComponent implements OnInit {
   public title = "test Component";
   public url = window.location.href;
   public isDisabled = true;
+  public successClass = "green";
+  public isSpecial = true;
+  public classGroup = {
+    "red": this.isDisabled,
+    "green": !this.isDisabled,
+    "blue": this.isSpecial
+  };
+  public red = '#f00';
+  public highlightText = {
+    "color": "#000",
+    "background": "#ff0"
+  };
+  
 
   // @Input() public parentData;
   @Input('parentData') public message;

@@ -25,6 +25,21 @@
 <input type="text" [disabled]="isDisabled" bind-id="title" value="{{title}}">
 <br>
 
+<!-- Class Binding -->
+<h3 class="red">{{title}}</h3>
+<h3 [class]="'red'">{{title}}</h3>
+<h3 [class]="successClass">{{title}}</h3>
+<h3 class="red" [class]="successClass">{{title}}</h3>
+<h3 [class.red]="isDisabled">{{title}}</h3>
+<h3 [ngClass]="classGroup">{{title}}</h3>
+
+<!-- Style Binding -->
+<h3 style="color: #f00;">{{title}}</h3>
+<h3 [style.color]="'#f00'">{{title}}</h3>
+<h3 [style.color]="isDisabled ? '#f00': '#0f0'">{{title}}</h3>
+<h3 [style.color]="red">{{title}}</h3>
+<h3 [ngStyle]="highlightText">{{title}}</h3>
+
 <!-- Event Binding -->
 <button (click)="onClick()">Click Here</button>
 <br>

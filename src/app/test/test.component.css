@@ -1,3 +1,20 @@
 .red {
-    background: red;
+    background: #f00;
+    color: #fff;
+}
+.green {
+    background: #0f0;
+}
+.blue {
+    background: #00f;
+    color: #fff;
+}
+.yellow {
+    background: #ff0;
+}
+.cyan {
+    background: #0ff;
+}
+.magento {
+    background: #f0f;
 }
